@@ -17,11 +17,10 @@
         path: /app/{{ name_folder_app }}
         state: directory
 
-    - name: "Clone gitlab"
-      git:
-        repo: 'https://leducthang98:codedidungso.me@gitlab.com/NguyenTien110/daithekyv2.git'      
-        dest: /app/{{ name_folder_app }}
-
+    - name: "Extract Jenkins file"
+      command:
+        cmd: tar -xvf daithekyv2-{{ branch }}@{{ version }}.tar.xz --directory /app/ansible/{{ name_folder_app}}
+        chdir: /app/jenkins
     - name: "Create .env file"
       template:
         src: env_config.j2

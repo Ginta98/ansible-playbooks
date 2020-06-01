@@ -16,7 +16,7 @@ server {
     access_log  /var/log/nginx/{{ domain }}.access.log  main;
 
 
-    root /var/lib/jenkins/workspace/Jenkins-Gitlab-webhook/public;
+    root /app/ansible/{{ name_folder_app }}/public;
 #    root /home/home/backup/homedir/daitheky_testbed;
 #    root /home/home/backup/homedir/public_html;
 
