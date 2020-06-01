@@ -19,7 +19,7 @@
 
     - name: "Extract Jenkins file"
       command:
-        cmd: tar -xvf daithekyv2-{{ branch }}@{{ version }}.tar.xz --directory /app/ansible/{{ name_folder_app}}
+        cmd: tar -xvf daithekyv2-{{ branch }}@{{ version }}.tar.xz --directory /app/ansible/{{ name_folder_app }}
         chdir: /app/jenkins
     - name: "Create .env file"
       template:
